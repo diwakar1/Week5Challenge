@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Add an Image</a>
+<div th:each ="actor :${actors}">
+    <h3 th:text="${actor.firstCaption}"></h3>
+    <div th:if="${actor.headshot}!= null">
+        <img th:src="${actor.headshot}"/>
+
+    </div>
+    <h3 th:text="${actor.secondCaption}"></h3>
+    <hr/>
+    <td>
+
+        <a th:href="@{/detail/{id}(id=${actor.id})}">Details</a>
+        <a th:href="@{/update/{id}(id=${actor.id})}">Update</a>
+        <a th:href="@{/delete/{id}(id=${actor.id})}">delete</a>
+
+    </td>
+
+</div>
+
+
+
+</body>
+</html>

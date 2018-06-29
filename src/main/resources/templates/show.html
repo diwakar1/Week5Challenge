@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/"> show all contents</a><br/>
+<span th:text="${actor.firstCaption}"></span><br/>
+<img th:src="${actor.headshot}"/>
+description:<span th:text="${actor.description}"></span><br/>
+<span th:text="${actor.secondCaption}"></span><br/>
+
+</body>
+</html>
